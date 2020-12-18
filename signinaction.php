@@ -40,6 +40,8 @@ if(isset($_POST['signin'])){
 					$user = $dbkey['voter_id'];
 					$username = $dbkey['username'];
 					$name = $dbkey['name'];
+					$voter_state = $dbkey['state'];
+					$voter_lga = $dbkey['voter_lga'];
 					$status = 1;
 					break;
 				}
@@ -48,6 +50,8 @@ if(isset($_POST['signin'])){
 			$_SESSION['user']=$user;
 			$_SESSION['username'] = $username;
 			$_SESSION['name'] = $name;
+			$_SESSION['voter_state'] = $voter_state;
+			$_SESSION['voter_lga'] = $voter_lga;
 
 			header("location:home.php");
 		}else{
